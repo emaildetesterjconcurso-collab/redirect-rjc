@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    const hash = window.location.hash;
+
+    if (hash.includes("access_token")) {
+      const query = hash.substring(1);
+      const newUrl = "https://rjconcurso-cdq.streamlit.app/?" + query;
+      window.location.replace(newUrl);
+    } else {
+      document.body.innerText = "Link inválido ou expirado.";
+    }
+  </script>
+</head>
+<body></body>
+</html>
